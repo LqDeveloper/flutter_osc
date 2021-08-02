@@ -49,6 +49,86 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `资讯`
+  String get news {
+    return Intl.message(
+      '资讯',
+      name: 'news',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `动弹`
+  String get tweet {
+    return Intl.message(
+      '动弹',
+      name: 'tweet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `发现`
+  String get discover {
+    return Intl.message(
+      '发现',
+      name: 'discover',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `我的`
+  String get my {
+    return Intl.message(
+      '我的',
+      name: 'my',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `发布动弹`
+  String get publish_tweet {
+    return Intl.message(
+      '发布动弹',
+      name: 'publish_tweet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `动弹小黑屋`
+  String get tweet_xiao_hei_wu {
+    return Intl.message(
+      '动弹小黑屋',
+      name: 'tweet_xiao_hei_wu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `关于`
+  String get about {
+    return Intl.message(
+      '关于',
+      name: 'about',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `设置`
+  String get settings {
+    return Intl.message(
+      '设置',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

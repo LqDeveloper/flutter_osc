@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_osc/utils/osc_colors.dart';
+import 'package:flutter_osc/generated/l10n.dart';
 
 class OSCDrawer extends StatelessWidget {
   final itemIcons = const <String>[
@@ -10,7 +11,7 @@ class OSCDrawer extends StatelessWidget {
     'images/left_menu/ic_settings.png'
   ];
 
-  final itemTitles = const <String>['发布动弹', '动弹小黑屋', '关于', '设置'];
+  final itemTitles = [S.current.publish_tweet, S.current.tweet_xiao_hei_wu, S.current.about, S.current.settings];
 
   @override
   Widget build(BuildContext context) {

@@ -9,9 +9,14 @@ import 'utils/launch_app.dart';
 
 void main() {
   LaunchApp.launch(() {
-    runApp(ChangeNotifierProvider(
-      create: (BuildContext context) => ThemeDataBean(),
+    runApp(MultiProvider(
       child: MyApp(),
+      providers: [
+        ChangeNotifierProvider(
+          create: (BuildContext context) => ThemeDataBean(),
+          child: MyApp(),
+        )
+      ],
     ));
   });
 }
@@ -31,7 +36,8 @@ class MyApp extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      theme: context.watch<ThemeDataBean>().themeData,
+      theme:
+          context.select<ThemeDataBean,ThemeData>((value) => value.themeData),
       initialRoute: RouterUtils.instance.initialRoute,
       routes: RouterUtils.instance.routes,
     );

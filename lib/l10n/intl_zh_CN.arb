@@ -3,5 +3,9 @@
   "news": "资讯",
   "tweet": "动弹",
   "discover": "发现",
-  "my": "我的"
+  "my": "我的",
+  "publish_tweet": "发布动弹",
+  "tweet_xiao_hei_wu": "动弹小黑屋",
+  "about": "关于",
+  "settings": "设置"
 }

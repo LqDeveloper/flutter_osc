@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_osc/bean/theme_data_bean.dart';
 import 'package:flutter_osc/ui/osc_drawer.dart';
-
+import 'package:provider/provider.dart';
+import 'package:flutter_osc/generated/l10n.dart';
 import 'package:flutter_osc/utils/osc_colors.dart';
 import 'news/news.dart';
 import 'tweet/tweet.dart';
@@ -15,7 +17,12 @@ class MainWidget extends StatefulWidget {
 }
 
 class _MainState extends State<MainWidget> {
-  final _tabTitles = const <String>['资讯', '动弹', '发现', '我的'];
+  final _tabTitles = [
+    S.current.news,
+    S.current.tweet,
+    S.current.discover,
+    S.current.discover
+  ];
   int _currentIndex = 0;
 
   final _normalImages = const <String>[
